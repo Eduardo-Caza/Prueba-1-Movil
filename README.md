@@ -22,3 +22,6 @@ Aquí pongo algunas imágenes relacionadas con la aplicacion:
 -Tab 4
 ![Calcular las raices de una ecuación cuadrática.](https://github.com/Eduardo-Caza/Prueba-1-Movil/blob/master/Captura%20de%20pantalla%202024-10-25%20143523.png)
 
+## APK
+
+[app-debug.zip](https://github.com/user-attachments/files/17526918/app-debug.zip)
