@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Cálculo de Diferencia de Días
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Cálculo de Días</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div style="display: flex; justify-content: space-between; margin: 16px;">
+    <!-- DatePicker para Fecha Inicial -->
+    <ion-item style="flex: 1; margin-right: 8px;">
+      <ion-label position="stacked">Fecha Inicial</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="fechaInicial" (ionChange)="calcularDiferencia()"></ion-datetime>
+    </ion-item>
+
+    <!-- DatePicker para Fecha Final -->
+    <ion-item style="flex: 1; margin-left: 8px;">
+      <ion-label position="stacked">Fecha Final</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="fechaFinal" (ionChange)="calcularDiferencia()"></ion-datetime>
+    </ion-item>
+  </div>
+
+  <!-- Mostrar diferencia de días -->
+  <div style="text-align: center; margin-top: 20px;">
+    <ion-text style="font-size: 24px;" *ngIf="diferenciaDias !== null">
+      La diferencia de días es: {{ diferenciaDias }}
+    </ion-text>
+  </div>
 </ion-content>

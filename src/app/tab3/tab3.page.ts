@@ -6,7 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  fechaInicial: string = '';
+  fechaFinal: string = '';
+  diferenciaDias: number | null = null;
 
   constructor() {}
 
+  calcularDiferencia() {
+    if (this.fechaInicial && this.fechaFinal) {
+      const fechaInicio = new Date(this.fechaInicial);
+      const fechaFin = new Date(this.fechaFinal);
+      const diferenciaTiempo = fechaFin.getTime() - fechaInicio.getTime();
+      this.diferenciaDias = Math.floor(diferenciaTiempo / (1000 * 3600 * 24));
+    }
+  }
 }
